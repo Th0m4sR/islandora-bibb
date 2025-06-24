@@ -1,5 +1,5 @@
 uuid: 9aac45a9-5f0b-4fc0-850d-a82041758de5
-langcode: en
+langcode: de
 status: false
 dependencies:
   config:
@@ -84,13 +84,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Anwenden
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
       access:
         type: perm
         options:
@@ -113,7 +113,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Alle
           title_enable: false
           title: ''
           default_argument_type: node
@@ -558,11 +558,11 @@ display:
       tags: {  }
   thumbnail:
     id: thumbnail
-    display_title: Thumbnail
+    display_title: Miniaturbild
     display_plugin: entity_view
     position: 1
     display_options:
-      title: Thumbnail
+      title: Miniaturbild
       filters:
         status:
           id: status

@@ -1,5 +1,5 @@
 uuid: 4d072e61-7e4b-47d4-aa7b-bdd56035a854
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -59,7 +59,7 @@ tips:
   search-api-index-form-options:
     id: search-api-index-form-options
     plugin: text
-    label: 'Advanced options'
+    label: 'Erweiterte Optionen'
     weight: 7
     selector: '#edit-options'
     body: 'These options allow more detailed configuration of index behavior, but can usually safely be ignored by inexperienced users.'

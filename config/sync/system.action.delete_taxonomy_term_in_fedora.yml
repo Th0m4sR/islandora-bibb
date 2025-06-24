@@ -1,5 +1,5 @@
 uuid: f1899a33-1e84-41a0-b0a5-341b641ec5cf
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: taxonomy_term
 plugin: emit_term_event
 configuration:
   queue: islandora-indexing-fcrepo-delete
-  event: Delete
+  event: Löschen

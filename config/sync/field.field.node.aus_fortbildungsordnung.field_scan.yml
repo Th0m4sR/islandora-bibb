@@ -1,0 +1,33 @@
+uuid: 349b3848-7485-408d-91e0-de2909100ed2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scan
+    - media.type.document
+    - media.type.extracted_text
+    - media.type.image
+    - node.type.aus_fortbildungsordnung
+id: node.aus_fortbildungsordnung.field_scan
+field_name: field_scan
+entity_type: node
+bundle: aus_fortbildungsordnung
+label: Scan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+      extracted_text: extracted_text
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: document
+field_type: entity_reference

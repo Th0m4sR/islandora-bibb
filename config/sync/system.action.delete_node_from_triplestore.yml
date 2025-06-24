@@ -1,5 +1,5 @@
 uuid: 03bc78d2-e3e6-4f2f-a112-d879ebd11cf5
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: node
 plugin: emit_node_event
 configuration:
   queue: islandora-indexing-triplestore-delete
-  event: Delete
+  event: Löschen

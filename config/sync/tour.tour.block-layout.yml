@@ -1,5 +1,5 @@
 uuid: 1871b024-d6e2-40ae-a391-9aaf2fc9deb7
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: ructO0IOsghR3CIbNd-0QfLTDiUo8gIJ7mB_nxSil4o
 id: block-layout
-label: 'Block Layout Page'
+label: Blocklayout-Verwaltungsbereichsseite
 module: block
 routes:
   -
@@ -16,30 +16,30 @@ tips:
   block-layout:
     id: block-layout
     plugin: text
-    label: 'Block Layout'
+    label: Blocklayout
     weight: 1
-    body: 'Blocks are boxes of content rendered into an area, or region, of a web page that can be displayed in regions (such as footer or sidebar) on your page.'
+    body: 'Blöcke sind Boxen mit Inhalten, die in einem Abschnitt oder einem Bereich einer Webseite dargestellt werden, die in Regionen (z. B. Fußzeile oder Seitenleiste) auf der Website angezeigt werden können.'
   place-block:
     id: place-block
     plugin: text
-    label: 'Place Blocks'
+    label: 'Blöcke platzieren'
     weight: 2
     selector: .button--small
-    body: 'Any custom or contributed block can be added to a particular region by clicking on a button Place block. A new block can also be created by clicking on Place Block'
+    body: 'Jeder benutzerdefinierte oder von einem Modul bereitgestellte Block kann zu einem bestimmten Abschnitt hinzugefügt werden, indem man auf den Butten Block platzieren klickt. Durch einen Klick auf Block platzieren, kann auch ein neuer Block erstellt werden.'
   block-region:
     id: block-region
     plugin: text
-    label: 'Block Region'
+    label: Blockregion
     weight: 3
     selector: .block-region-select
-    body: 'Assign or change the region of a block by clicking here. A dropdown list with all the regions will appear. You can place one block in multiple regions.'
+    body: 'Weisen Sie die Region eines Blocks zu oder ändern Sie diese, indem Sie hier klicken. Es erscheint eine Dropdown-Liste mit allen Regionen. Ein Block kann in mehreren Regionen platziert werden.'
   configure-block:
     id: configure-block
     plugin: text
-    label: 'Configure Block'
+    label: 'Block konfigurieren'
     weight: 4
     selector: .dropbutton-widget
-    body: 'By Clicking on "Configure" you can go ahead and edit the contents of the block, deal with the visibility settings and even change the placement of where it is on your theme.'
+    body: 'Wenn Sie auf „Konfigurieren" klicken, können Sie den Inhalt des Blocks bearbeiten, Sichtbarkeitseinstellungen vornehmen und sogar die Position des Blocks im aktiven Theme ändern.'
   custom-block-library:
     id: custom-block-library
     plugin: text

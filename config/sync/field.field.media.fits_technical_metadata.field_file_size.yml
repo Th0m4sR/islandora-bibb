@@ -1,5 +1,5 @@
 uuid: 001594c3-dba9-4682-be89-716ff52411dc
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: media.fits_technical_metadata.field_file_size
 field_name: field_file_size
 entity_type: media
 bundle: fits_technical_metadata
-label: 'File size'
+label: Dateigröße
 description: ''
 required: false
 translatable: true

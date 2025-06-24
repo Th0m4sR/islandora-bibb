@@ -1,5 +1,5 @@
 uuid: b913cb7d-8e36-4542-986e-07b0074fdf4d
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: media.extracted_text.field_media_file
 field_name: field_media_file
 entity_type: media
 bundle: extracted_text
-label: File
+label: Datei
 description: ''
 required: true
 translatable: true

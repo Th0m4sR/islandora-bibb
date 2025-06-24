@@ -1,5 +1,5 @@
 uuid: 8817e701-536b-4b48-9f87-806c782fd49c
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: 'Branding der Website'
   label_display: '0'
   provider: system
   use_site_logo: true

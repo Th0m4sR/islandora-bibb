@@ -1,5 +1,5 @@
 uuid: 0fb41f33-de24-4baa-ac42-62e4146cda06
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: media.fits_technical_metadata.field_mime_type
 field_name: field_mime_type
 entity_type: media
 bundle: fits_technical_metadata
-label: 'MIME type'
+label: MIME-Typ
 description: ''
 required: false
 translatable: true

@@ -1,5 +1,5 @@
 uuid: 4bb8a9fb-5912-4f08-9660-928e802e761a
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: media
 plugin: emit_media_event
 configuration:
   queue: islandora-indexing-fcrepo-media
-  event: Update
+  event: Aktualisieren

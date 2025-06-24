@@ -1,5 +1,5 @@
 uuid: fb21b341-d94f-4536-b2d0-8b79001d22b9
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: taxonomy_term
 plugin: emit_term_event
 configuration:
   queue: islandora-indexing-fcrepo-content
-  event: Update
+  event: Aktualisieren

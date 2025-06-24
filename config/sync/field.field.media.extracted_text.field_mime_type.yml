@@ -1,5 +1,5 @@
 uuid: e1a132b0-f5bf-4fb5-a230-f40de9816d3e
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -11,7 +11,7 @@ id: media.extracted_text.field_mime_type
 field_name: field_mime_type
 entity_type: media
 bundle: extracted_text
-label: 'MIME type'
+label: MIME-Typ
 description: ''
 required: false
 translatable: false

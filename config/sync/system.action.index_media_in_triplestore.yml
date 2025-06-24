@@ -1,5 +1,5 @@
 uuid: a89cfe24-d34b-4276-bbf0-59d6f1e7c505
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: media
 plugin: emit_media_event
 configuration:
   queue: islandora-indexing-triplestore-index
-  event: Update
+  event: Aktualisieren

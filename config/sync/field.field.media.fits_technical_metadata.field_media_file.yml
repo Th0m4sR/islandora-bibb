@@ -1,5 +1,5 @@
 uuid: 51e020d6-0055-4290-b639-f47741d454a6
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: media.fits_technical_metadata.field_media_file
 field_name: field_media_file
 entity_type: media
 bundle: fits_technical_metadata
-label: File
+label: Datei
 description: ''
 required: true
 translatable: true

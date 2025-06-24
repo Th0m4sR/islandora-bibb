@@ -1,5 +1,5 @@
 uuid: 1d47fa08-2571-4597-b32a-17f0eee643ae
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: node
 plugin: emit_node_event
 configuration:
   queue: islandora-indexing-triplestore-index
-  event: Update
+  event: Aktualisieren

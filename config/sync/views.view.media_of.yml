@@ -1,5 +1,5 @@
 uuid: 15816d2f-ebf5-4cc5-bf6c-f8035f0f0c09
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -104,7 +104,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: field
-          label: 'Media type'
+          label: Medientyp
           exclude: false
           alter:
             alter_text: false
@@ -167,7 +167,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'MIME type'
+          label: MIME-Typ
           exclude: false
           alter:
             alter_text: false
@@ -232,7 +232,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Changed
+          label: Geändert
           exclude: false
           alter:
             alter_text: false
@@ -323,22 +323,22 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elemente pro Seite'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Alle -'
             offset: false
-            offset_label: Offset
+            offset_label: Versatz
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Anwenden
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: Sortierung
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
       access:
         type: perm
         options:
@@ -361,7 +361,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Alle
           title_enable: false
           title: ''
           default_argument_type: node
@@ -490,7 +490,7 @@ display:
         - extensions
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Seite
     display_plugin: page
     position: 1
     display_options:
@@ -545,7 +545,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: Action
+          action_title: Aktion
           include_exclude: exclude
           selected_actions: {  }
         name:
@@ -623,7 +623,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: field
-          label: 'Media type'
+          label: Medientyp
           exclude: false
           alter:
             alter_text: false
@@ -686,7 +686,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'MIME type'
+          label: MIME-Typ
           exclude: false
           alter:
             alter_text: false
@@ -814,7 +814,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Changed
+          label: Geändert
           exclude: false
           alter:
             alter_text: false
@@ -937,7 +937,7 @@ display:
       path: node/%node/media
       menu:
         type: tab
-        title: Media
+        title: Medien
         description: 'Lists all media belonging to this content'
         weight: 0
         expanded: false
@@ -1100,7 +1100,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'MIME type'
+          label: MIME-Typ
           exclude: false
           alter:
             alter_text: false
@@ -1165,7 +1165,7 @@ display:
           entity_type: media
           entity_field: changed
           plugin_id: field
-          label: Changed
+          label: Geändert
           exclude: false
           alter:
             alter_text: false

@@ -1,5 +1,5 @@
 uuid: 617cf706-2b26-4f44-87a2-a7cafe286430
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: node
 plugin: emit_node_event
 configuration:
   queue: islandora-indexing-fcrepo-delete
-  event: Delete
+  event: Löschen

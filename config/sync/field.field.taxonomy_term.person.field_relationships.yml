@@ -1,5 +1,5 @@
 uuid: e1b073a9-63ee-450f-9acb-496f71cdaa6f
-langcode: en
+langcode: de
 status: true
 dependencies:
   config:
@@ -15,7 +15,7 @@ id: taxonomy_term.person.field_relationships
 field_name: field_relationships
 entity_type: taxonomy_term
 bundle: person
-label: Relationships
+label: Beziehungen
 description: ''
 required: false
 translatable: true
@@ -42,7 +42,7 @@ settings:
     'schema:funder': Funder
     'schema:knowsAbout': 'Knows about'
     'schema:memberOf': 'Member of'
-    'schema:parent': Parent
+    'schema:parent': Übergeordnet
     'schema:relatedTo': 'Related to'
     'schema:sibling': Sibling
     'schema:sponsor': Sponsor

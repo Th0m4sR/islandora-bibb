@@ -1,5 +1,5 @@
 uuid: af8211c8-bff1-4f20-9bef-0d75284032be
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -9,20 +9,20 @@ dependencies:
 _core:
   default_config_hash: S_NN2ubd_NovTfgzbHVlZMmIJJQS-3h9h3inzbaFUMY
 id: comments_recent
-label: 'Recent comments'
+label: 'Neueste Kommentare'
 module: views
-description: 'Recent comments.'
+description: 'Neueste Kommentare.'
 tag: default
 base_table: comment_field_data
 base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: Standard
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recent comments'
+      title: 'Neueste Kommentare'
       fields:
         subject:
           id: subject
@@ -131,8 +131,8 @@ display:
           hide_alter_empty: true
           type: timestamp_ago
           settings:
-            future_format: '@interval hence'
-            past_format: '@interval ago'
+            future_format: 'in @interval'
+            past_format: 'vor @interval'
             granularity: 2
       pager:
         type: some
@@ -158,7 +158,7 @@ display:
           plugin_id: text_custom
           label: ''
           empty: true
-          content: 'No comments available.'
+          content: 'Keine Kommentare verfügbar.'
           tokenize: false
       sorts:
         created:
@@ -257,8 +257,8 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Recent comments'
-      block_category: 'Lists (Views)'
+      block_description: 'Neueste Kommentare'
+      block_category: 'Listen (Ansichten)'
       allow:
         items_per_page: true
     cache_metadata:

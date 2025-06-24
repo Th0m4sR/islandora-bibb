@@ -1,5 +1,5 @@
 uuid: 1855c402-7e40-4768-a06f-19d248509ac0
-langcode: en
+langcode: de
 status: true
 dependencies:
   module:
@@ -12,4 +12,4 @@ type: media
 plugin: emit_media_event
 configuration:
   queue: islandora-indexing-triplestore-delete
-  event: Delete
+  event: Löschen
