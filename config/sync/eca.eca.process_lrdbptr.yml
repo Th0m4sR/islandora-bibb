@@ -1,0 +1,33 @@
+uuid: 12e00e15-be88-4f92-961f-fb1b03197319
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.aus_fortbildungsordnung
+    - system.action.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  module:
+    - eca_content
+id: process_lrdbptr
+modeller: bpmn_io
+label: Transcription
+version: ''
+weight: 0
+events:
+  Event_0jpsfmc:
+    plugin: 'content_entity:insert'
+    label: 'Create Node'
+    configuration:
+      type: 'node aus_fortbildungsordnung'
+    successors:
+      -
+        id: Activity_14pkh7w
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_14pkh7w:
+    plugin: 'eca_preconfigured_action:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    label: 'Transcribe Document'
+    configuration:
+      object: ''
+    successors: {  }
