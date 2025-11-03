@@ -1008,6 +1008,15 @@ display:
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.creators_and_contributors_swc'
+        - 'config:facets.facet.member_of_swc'
+        - 'config:facets.facet.physical_form_swc'
+        - 'config:facets.facet.publisher_swc'
+        - 'config:facets.facet.resource_type_swc'
+        - 'config:facets.facet.subject_names_swc'
+        - 'config:facets.facet.subject_temporal_swc'
+        - 'config:facets.facet.subjects'
+        - 'config:facets.facet.year_swc'
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_publisher'
         - 'config:field.storage.node.field_resource_type'
@@ -1044,6 +1053,7 @@ display:
           plugin_id: search_api_options
           operator: or
           value:
+            aus_fortbildungsordnung: aus_fortbildungsordnung
             islandora_object: islandora_object
           group: 1
           exposed: false
@@ -1097,6 +1107,15 @@ display:
         - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:facets.facet.creators_and_contributors'
+        - 'config:facets.facet.member_of'
+        - 'config:facets.facet.physical_form'
+        - 'config:facets.facet.publisher'
+        - 'config:facets.facet.resource_type'
+        - 'config:facets.facet.subject'
+        - 'config:facets.facet.subject_name'
+        - 'config:facets.facet.temporal_subject'
+        - 'config:facets.facet.year'
         - 'config:field.storage.node.field_description'
         - 'config:field.storage.node.field_publisher'
         - 'config:field.storage.node.field_resource_type'

@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: 8US9Yb33EXUGI8LNE2tUeFZGOdYR9ZEQnSmQ9oK_X98
 id: cache_document_default_9_0_0
-label: 'Document Cache'
+label: Dokument-Cache
 minimum_solr_version: 9.0.0
 environments: {  }
 cache:

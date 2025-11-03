@@ -15,13 +15,13 @@ settings:
   allowed_values:
     -
       value: 'org:OrganizationalUnit'
-      label: 'Organizational Unit'
+      label: Organisationseinheit
     -
       value: 'schema:Airline'
       label: Airline
     -
       value: 'schema:Corporation'
-      label: Corporation
+      label: Gesellschaft
     -
       value: 'schema:EducationalOrganization'
       label: 'Educational Organization'
@@ -30,7 +30,7 @@ settings:
       label: 'Government Organization'
     -
       value: 'schema:LocalBusiness'
-      label: 'Local Business'
+      label: 'Lokales Unternehmen'
     -
       value: 'schema:MedicalOrganization'
       label: 'Medical Organization'

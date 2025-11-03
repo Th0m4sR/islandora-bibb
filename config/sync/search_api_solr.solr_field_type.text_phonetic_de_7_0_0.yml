@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: ltE-Q5iCha_AuHPONs-R4du7AsZhIDmZKsmzxpPgOH4
 id: text_phonetic_de_7_0_0
-label: 'Fulltext Phonetic German'
+label: 'Volltext phonetisch Deutsch'
 minimum_solr_version: 7.0.0
 custom_code: phonetic
 field_type_language_code: de

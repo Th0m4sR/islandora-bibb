@@ -13,7 +13,7 @@ id: taxonomy_term.geo_location.field_geo_geolocation
 field_name: field_geo_geolocation
 entity_type: taxonomy_term
 bundle: geo_location
-label: Latitude/Longitude
+label: 'Breitengrad / Längengrad'
 description: ''
 required: false
 translatable: true

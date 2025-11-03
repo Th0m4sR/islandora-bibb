@@ -34,10 +34,10 @@ settings:
     auto_create: false
     auto_create_bundle: corporate_body
   rel_types:
-    'schema:member': Member
+    'schema:member': Mitglied
     'schema:founder': Founder
     'schema:funder': Funder
     'schema:knowsAbout': 'Knows about'
-    'schema:memberOf': 'Member of'
+    'schema:memberOf': 'Mitglied von'
     'schema:sponsor': Sponsor
 field_type: typed_relation

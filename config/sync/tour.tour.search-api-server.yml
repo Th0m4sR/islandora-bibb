@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: j-YgGnx-C5I3OTFsDsNkTyPC8zH7ZQyBMvmZ6gUMH3Q
 id: search-api-server
-label: 'Information about a server'
+label: 'Informationen über einen Server'
 module: search_api
 routes:
   -
@@ -16,34 +16,34 @@ tips:
   search-api-server-introduction:
     id: search-api-server-introduction
     plugin: text
-    label: 'Information about a server'
+    label: 'Informationen über einen Server'
     weight: 1
-    body: 'This page shows a summary of a search server.'
+    body: 'Diese Seite zeigt die Zusammenfassung eines Suchservers an.'
   search-api-server-status:
     id: search-api-server-status
     plugin: text
     label: Status
     weight: 2
     selector: .search-api-server-summary--status
-    body: 'Shows whether the server is currently enabled or disabled.'
+    body: 'Zeigt an, ob der Server aktuell aktiviert oder deaktiviert ist.'
   search-api-server-backend:
     id: search-api-server-backend
     plugin: text
-    label: 'Backend class'
+    label: Backend-Klasse
     weight: 3
     selector: .search-api-server-summary--backend
-    body: 'The backend plugin used for this server. The backend plugin determines how items are indexed and searched – for example, using the database or an Apache Solr server.'
+    body: 'Das Backend-Plugin, das für diesen Server verwendet wird. Das Backend-Plugin bestimmt, wie Elemente indiziert und durchsucht werden - z.B. über die Datenbank oder einen Apache Solr-Server.'
   search-api-server-indexes:
     id: search-api-server-indexes
     plugin: text
-    label: 'Search indexes'
+    label: Suchindexe
     weight: 4
     selector: .search-api-server-summary--indexes
-    body: 'Lists all search indexes that are attached to this server.'
+    body: 'Listet jeden Index auf, der sich auf dem Server befindet.'
   search-api-server-clear:
     id: search-api-server-clear
     plugin: text
-    label: 'Delete all indexed data'
+    label: 'Alle indizierten Daten löschen'
     weight: 5
     selector: '#edit-clear'
-    body: "This will permanently remove all data currently indexed on this server for indexes that aren't read-only. Items are queued for reindexing. Until reindexing occurs, searches for the affected indexes will not return any results."
+    body: 'Dadurch werden alle Daten, die derzeit auf diesem Server für Indizes, die nicht schreibgeschützt sind, dauerhaft entfernt. Elemente werden für die Neuindizierung in die Warteschlange gestellt. Bis zur Neuindizierung liefert die Suche nach den betroffenen Begriffen keine Ergebnisse.'

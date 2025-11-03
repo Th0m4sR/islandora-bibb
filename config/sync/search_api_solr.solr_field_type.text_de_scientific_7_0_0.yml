@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: SaP4cNBXyKFbLtnvxGcPMEs58WAQalmUZtdGAN-H4mk
 id: text_de_scientific_7_0_0
-label: 'German Scientific Text Field'
+label: 'Textfeld Deutsch wissenschaftlich'
 minimum_solr_version: 7.0.0
 custom_code: ''
 field_type_language_code: de

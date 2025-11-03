@@ -13,7 +13,7 @@ id: taxonomy_term.islandora_models.field_external_uri
 field_name: field_external_uri
 entity_type: taxonomy_term
 bundle: islandora_models
-label: 'External URI'
+label: 'Externe URI'
 description: ''
 required: false
 translatable: true

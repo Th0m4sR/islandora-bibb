@@ -307,7 +307,7 @@ display:
       path: node/%node/members
       menu:
         type: tab
-        title: Children
+        title: 'Untergeordnete Elemente'
         description: ''
         weight: 0
         expanded: false

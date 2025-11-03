@@ -34,14 +34,14 @@ settings:
     auto_create: false
     auto_create_bundle: corporate_body
   rel_types:
-    'schema:alumni': Alumni
-    'schema:department': Department
-    'schema:employee': Employee
+    'schema:alumni': Absolventen
+    'schema:department': Abteilung
+    'schema:employee': Mitarbeiter
     'schema:founder': Founder
     'schema:funder': Funder
     'schema:knowsAbout': 'Knows about'
-    'schema:member': Member
-    'schema:memberOf': 'Member of'
+    'schema:member': Mitglied
+    'schema:memberOf': 'Mitglied von'
     'schema:parentOrganization': 'Parent Organization'
     'schema:sponsor': Sponsor
     'schema:subOrganization': Sub-organization

@@ -36,7 +36,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-          label: title
+          label: Titel
           exclude: false
           alter:
             alter_text: false
@@ -99,7 +99,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: description
+          label: Beschreibung
           exclude: false
           alter:
             alter_text: false

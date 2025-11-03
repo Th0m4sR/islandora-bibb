@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: TK3PjpP4I6WFh5JDY_L_c5XCiTyAZBBA9z0M9pcGjzo
 id: search-api-index-form
-label: 'Add or edit a Search API index'
+label: 'Hinzufügen oder Bearbeiten eines Such-API-Indexes'
 module: search_api
 routes:
   -
@@ -18,48 +18,48 @@ tips:
   search-api-index-form-introduction:
     id: search-api-index-form-introduction
     plugin: text
-    label: 'Adding or editing an index'
+    label: 'Hinzufügen oder Bearbeiten eines Index'
     weight: 1
-    body: 'This form can be used to edit an existing index or add a new index to your site. Indexes define a set of data that will be indexed and can then be searched.'
+    body: 'Mit diesem Formular kann ein bestehender Index bearbeitet oder ein neuer Index zur Website hinzugefügt werden. Indizes definieren einen Datensatz, der indiziert wird und dann durchsucht werden kann.'
   search-api-index-form-name:
     id: search-api-index-form-name
     plugin: text
-    label: 'Index name'
+    label: Index-Name
     weight: 2
     selector: '#edit-name'
-    body: 'Enter a name to identify this index. For example, "Content index". This will only be displayed in the admin user interface.'
+    body: 'Einen Namen eingeben, um diesen Index zu identifizieren. Zum Beispiel "Inhaltsindex". Dieser wird nur in der Admin-Benutzeroberfläche angezeigt.'
   search-api-index-form-datasources:
     id: search-api-index-form-datasources
     plugin: text
-    label: Datasources
+    label: Datenquellen
     weight: 3
     selector: '#edit-datasources'
-    body: 'Datasources define the types of items that will be indexed in this index. By default, all content entities (like content, comments and taxonomy terms) will be available here, but modules can also add their own.'
+    body: 'Datenquellen definieren die Element-Typen, die in diesem Index indiziert werden. Standardmäßig sind hier alle Inhalts-Elemente (wie Inhalt, Kommentare und Taxonomie-Begriffe) verfügbar, aber Module können auch ihre eigenen hinzufügen.'
   search-api-index-form-tracker:
     id: search-api-index-form-tracker
     plugin: text
     label: Tracker
     weight: 4
     selector: '#edit-tracker'
-    body: "An index's tracker is the system that keeps track of which items there are available for the index, and which of them still need to be indexed. Changing the tracker of an existing index will lead to reindexing of all items."
+    body: 'verfolgt, welche Elemente für den Index verfügbar sind und welche noch indiziert werden müssen. Das Ändern des Trackers eines bestehenden Index führt zur Neuindizierung aller Elemente.'
   search-api-index-form-server:
     id: search-api-index-form-server
     plugin: text
     label: Server
     weight: 5
     selector: '#edit-server'
-    body: 'The search server that the index should use for indexing and searching. If no server is selected here, the index cannot be enabled. An index can only have one server, but a server can have any number of indexes.'
+    body: 'Der Suchserver, den der Index für die Indizierung und Suche verwenden soll. Wenn hier kein Server ausgewählt ist, kann der Index nicht aktiviert werden. Ein Index kann nur einen Server haben, aber ein Server kann beliebig viele Indizes haben.'
   search-api-index-form-description:
     id: search-api-index-form-description
     plugin: text
-    label: 'Index description'
+    label: Index-Beschreibung
     weight: 6
     selector: '#edit-description'
-    body: 'Optionally, enter a description to explain the function of the index in more detail. This will only be displayed in the admin user interface.'
+    body: 'Optional kann eine Beschreibung eingegeben werden, um die Funktion des Index näher zu erläutern. Dies wird nur in der Admin-Benutzeroberfläche angezeigt.'
   search-api-index-form-options:
     id: search-api-index-form-options
     plugin: text
     label: 'Erweiterte Optionen'
     weight: 7
     selector: '#edit-options'
-    body: 'These options allow more detailed configuration of index behavior, but can usually safely be ignored by inexperienced users.'
+    body: 'Diese Optionen ermöglichen eine detailliertere Konfiguration des Indexverhaltens, können jedoch von unerfahrenen Benutzern normalerweise problemlos ignoriert werden.'
