@@ -1,4 +1,4 @@
-uuid: 349b3848-7485-408d-91e0-de2909100ed2
+uuid: a8ab3990-cfe3-4aac-9230-765d967cc0c5
 langcode: de
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_scan
     - media.type.document
     - media.type.extracted_text
+    - media.type.file
     - media.type.image
     - node.type.aus_fortbildungsordnung
 id: node.aus_fortbildungsordnung.field_scan
@@ -24,6 +25,7 @@ settings:
     target_bundles:
       document: document
       extracted_text: extracted_text
+      file: file
       image: image
     sort:
       field: _none

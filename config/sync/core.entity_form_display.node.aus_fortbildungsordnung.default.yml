@@ -169,7 +169,7 @@ content:
     third_party_settings: {  }
   field_scan:
     type: media_library_widget
-    weight: 135
+    weight: 144
     region: content
     settings:
       media_types: {  }

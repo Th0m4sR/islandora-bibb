@@ -182,7 +182,7 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 115
+    weight: 124
     region: content
   field_schlagwoerter:
     type: string
