@@ -5,7 +5,7 @@ dependencies:
   module:
     - islandora
 id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-label: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+label: 'TEI XML Transkript erstellen'
 type: node
 plugin: emit_node_event
 configuration:
