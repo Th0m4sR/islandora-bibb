@@ -14,6 +14,8 @@ dependencies:
     - field.storage.media.field_media_of
     - field.storage.node.field_scan
     - node.type.aus_fortbildungsordnung
+    - system.action.get_ocr_from_image
+    - system.action.media_save_action
   module:
     - eca_content
 id: process_hht6fhn
@@ -39,16 +41,19 @@ actions:
     label: 'media_of-Feld an Medium aktualisieren'
     configuration:
       field_name: field_media_of
-      field_value: entity
-      method: 'set:empty'
+      field_value: '[node]'
+      method: 'append:not_full'
       strip_tags: false
       trim: false
       save_entity: true
       object: mediaEntity
-    successors: {  }
+    successors:
+      -
+        id: Activity_1ga5gq1
+        condition: ''
   Activity_1t4u4yr:
     plugin: eca_token_load_entity_ref
-    label: 'Erhalte Medium-Entität'
+    label: 'Medium-Entity abrufen'
     configuration:
       field_name_entity_ref: field_scan.0
       token_name: mediaEntity
@@ -57,7 +62,7 @@ actions:
       entity_id: ''
       revision_id: ''
       properties: ''
-      langcode: _interface
+      langcode: _eca_token
       latest_revision: false
       unchanged: false
       object: entity
@@ -65,3 +70,18 @@ actions:
       -
         id: Activity_0une9jj
         condition: ''
+  Activity_1ga5gq1:
+    plugin: 'eca_preconfigured_action:media_save_action'
+    label: 'Medium speichern'
+    configuration:
+      object: mediaEntity
+    successors:
+      -
+        id: Activity_17ztygu
+        condition: ''
+  Activity_17ztygu:
+    plugin: 'eca_preconfigured_action:get_ocr_from_image'
+    label: 'Text extrahieren'
+    configuration:
+      object: node
+    successors: {  }

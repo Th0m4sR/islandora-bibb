@@ -7,13 +7,18 @@ dependencies:
 id: process_hht6fhn
 label: 'Neue Medien an Node linken'
 tags:
-  - untagged
+  - ''
 documentation: ''
 filename: ''
 modeldata: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
     <bpmn2:process id="Process_hhT6FHN" name="Neue Medien an Node linken" isExecutable="true">
+      <bpmn2:extensionElements>
+        <camunda:properties>
+          <camunda:property />
+        </camunda:properties>
+      </bpmn2:extensionElements>
       <bpmn2:startEvent id="Event_1s6ns1z" name="Ausbildungsordnung erstellt" camunda:modelerTemplate="org.drupal.event.content_entity:insert">
         <bpmn2:extensionElements>
           <camunda:properties>
@@ -32,7 +37,7 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_set_field_value" />
           </camunda:properties>
           <camunda:field name="method">
-            <camunda:string>set:empty</camunda:string>
+            <camunda:string>append:not_full</camunda:string>
           </camunda:field>
           <camunda:field name="strip_tags">
             <camunda:string>no</camunda:string>
@@ -44,7 +49,7 @@ modeldata: |
             <camunda:string>no</camunda:string>
           </camunda:field>
           <camunda:field name="field_value">
-            <camunda:string>entity</camunda:string>
+            <camunda:string>[node]</camunda:string>
           </camunda:field>
           <camunda:field name="save_entity">
             <camunda:string>yes</camunda:string>
@@ -54,9 +59,10 @@ modeldata: |
           </camunda:field>
         </bpmn2:extensionElements>
         <bpmn2:incoming>Flow_0c3lvw3</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_13chjhc</bpmn2:outgoing>
       </bpmn2:task>
       <bpmn2:sequenceFlow id="Flow_0c3lvw3" sourceRef="Activity_1t4u4yr" targetRef="Activity_0une9jj" />
-      <bpmn2:task id="Activity_1t4u4yr" name="Erhalte Medium-Entität" camunda:modelerTemplate="org.drupal.action.eca_token_load_entity_ref">
+      <bpmn2:task id="Activity_1t4u4yr" name="Medium-Entity abrufen" camunda:modelerTemplate="org.drupal.action.eca_token_load_entity_ref">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="eca_token_load_entity_ref" />
@@ -80,7 +86,7 @@ modeldata: |
             <camunda:string></camunda:string>
           </camunda:field>
           <camunda:field name="langcode">
-            <camunda:string>_interface</camunda:string>
+            <camunda:string>_eca_token</camunda:string>
           </camunda:field>
           <camunda:field name="latest_revision">
             <camunda:string>no</camunda:string>
@@ -88,9 +94,7 @@ modeldata: |
           <camunda:field name="unchanged">
             <camunda:string>no</camunda:string>
           </camunda:field>
-          <camunda:field name="properties">
-            <camunda:string></camunda:string>
-          </camunda:field>
+          <camunda:field name="properties" />
           <camunda:field name="object">
             <camunda:string>entity</camunda:string>
           </camunda:field>
@@ -98,6 +102,31 @@ modeldata: |
         <bpmn2:incoming>Flow_1iwncu6</bpmn2:incoming>
         <bpmn2:outgoing>Flow_0c3lvw3</bpmn2:outgoing>
       </bpmn2:task>
+      <bpmn2:task id="Activity_1ga5gq1" name="Medium speichern" camunda:modelerTemplate="org.drupal.action.eca_preconfigured_action:media_save_action">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_preconfigured_action:media_save_action" />
+          </camunda:properties>
+          <camunda:field name="object">
+            <camunda:string>mediaEntity</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_13chjhc</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_10gurfh</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_13chjhc" sourceRef="Activity_0une9jj" targetRef="Activity_1ga5gq1" />
+      <bpmn2:task id="Activity_17ztygu" name="Text extrahieren" camunda:modelerTemplate="org.drupal.action.eca_preconfigured_action:get_ocr_from_image">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_preconfigured_action:get_ocr_from_image" />
+          </camunda:properties>
+          <camunda:field name="object">
+            <camunda:string>node</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_10gurfh</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_10gurfh" sourceRef="Activity_1ga5gq1" targetRef="Activity_17ztygu" />
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-30264176-4dcf-4c00-a076-7379f9a16ce5">
       <bpmndi:BPMNPlane id="sid-ff996ccc-42fa-45a3-a67f-d8b8ecc0bfa7" bpmnElement="Process_hhT6FHN">
@@ -113,6 +142,15 @@ modeldata: |
         </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Activity_0j45av5_di" bpmnElement="Activity_1t4u4yr">
           <dc:Bounds x="420" y="130" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1ga5gq1_di" bpmnElement="Activity_1ga5gq1">
+          <dc:Bounds x="740" y="130" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_17ztygu_di" bpmnElement="Activity_17ztygu">
+          <dc:Bounds x="900" y="130" width="100" height="80" />
+          <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="Flow_1iwncu6_di" bpmnElement="Flow_1iwncu6">
           <di:waypoint x="368" y="170" />
@@ -121,6 +159,14 @@ modeldata: |
         <bpmndi:BPMNEdge id="Flow_0c3lvw3_di" bpmnElement="Flow_0c3lvw3">
           <di:waypoint x="520" y="170" />
           <di:waypoint x="580" y="170" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_13chjhc_di" bpmnElement="Flow_13chjhc">
+          <di:waypoint x="680" y="170" />
+          <di:waypoint x="740" y="170" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_10gurfh_di" bpmnElement="Flow_10gurfh">
+          <di:waypoint x="840" y="170" />
+          <di:waypoint x="900" y="170" />
         </bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
