@@ -1,4 +1,4 @@
-uuid: 12e00e15-be88-4f92-961f-fb1b03197319
+uuid: dea8a1e1-e271-4887-b589-0be227f531aa
 langcode: de
 status: true
 dependencies:
@@ -7,27 +7,27 @@ dependencies:
     - system.action.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   module:
     - eca_content
-id: process_lrdbptr
+id: process_c3gujlz
 modeller: bpmn_io
-label: Transcription
+label: 'Trigger TEI Transcription'
 version: ''
 weight: 0
 events:
-  Event_0jpsfmc:
+  Event_04fvb8i:
     plugin: 'content_entity:insert'
-    label: 'Create Node'
+    label: 'Neue Entität erstellt'
     configuration:
       type: 'node aus_fortbildungsordnung'
     successors:
       -
-        id: Activity_14pkh7w
+        id: Activity_1vv877a
         condition: ''
 conditions: {  }
 gateways: {  }
 actions:
-  Activity_14pkh7w:
+  Activity_1vv877a:
     plugin: 'eca_preconfigured_action:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
-    label: 'Transcribe Document'
+    label: 'TEI XML Transkript erstellen'
     configuration:
       object: ''
     successors: {  }

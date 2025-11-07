@@ -10,7 +10,7 @@ dependencies:
 _core:
   default_config_hash: D_mojRjxWhgQElK_31fBHCqXm829yxmgsjq7MeInnMg
 id: eca_log
-label: 'ECA Log'
+label: 'ECA -Protokoll'
 module: views
 description: ''
 tag: ''

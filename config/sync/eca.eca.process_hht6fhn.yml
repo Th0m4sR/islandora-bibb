@@ -1,0 +1,67 @@
+uuid: 4c274769-64fa-41dd-915b-08c40b0a82cb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.audio.field_media_of
+    - field.field.media.document.field_media_of
+    - field.field.media.extracted_text.field_media_of
+    - field.field.media.file.field_media_of
+    - field.field.media.fits_technical_metadata.field_media_of
+    - field.field.media.image.field_media_of
+    - field.field.media.video.field_media_of
+    - field.field.node.aus_fortbildungsordnung.field_scan
+    - field.storage.media.field_media_of
+    - field.storage.node.field_scan
+    - node.type.aus_fortbildungsordnung
+  module:
+    - eca_content
+id: process_hht6fhn
+modeller: bpmn_io
+label: 'Neue Medien an Node linken'
+version: ''
+weight: 0
+events:
+  Event_1s6ns1z:
+    plugin: 'content_entity:insert'
+    label: 'Ausbildungsordnung erstellt'
+    configuration:
+      type: 'node aus_fortbildungsordnung'
+    successors:
+      -
+        id: Activity_1t4u4yr
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0une9jj:
+    plugin: eca_set_field_value
+    label: 'media_of-Feld an Medium aktualisieren'
+    configuration:
+      field_name: field_media_of
+      field_value: entity
+      method: 'set:empty'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: mediaEntity
+    successors: {  }
+  Activity_1t4u4yr:
+    plugin: eca_token_load_entity_ref
+    label: 'Erhalte Medium-Entität'
+    configuration:
+      field_name_entity_ref: field_scan.0
+      token_name: mediaEntity
+      from: _eca_token
+      entity_type: media
+      entity_id: ''
+      revision_id: ''
+      properties: ''
+      langcode: _interface
+      latest_revision: false
+      unchanged: false
+      object: entity
+    successors:
+      -
+        id: Activity_0une9jj
+        condition: ''

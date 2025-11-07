@@ -1,0 +1,45 @@
+uuid: 4d451ca1-66c3-4f5d-9eab-26d90fa184c1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.media.audio.field_media_use
+    - field.field.media.document.field_media_use
+    - field.field.media.extracted_text.field_media_use
+    - field.field.media.file.field_media_use
+    - field.field.media.fits_technical_metadata.field_media_use
+    - field.field.media.image.field_media_use
+    - field.field.media.video.field_media_use
+    - field.storage.media.field_media_use
+  module:
+    - eca_content
+id: process_jkm1qkp
+modeller: bpmn_io
+label: 'Set Media Use'
+version: ''
+weight: 0
+events:
+  Event_07j9882:
+    plugin: 'content_entity:insert'
+    label: 'Medium erstellt'
+    configuration:
+      type: 'media _all'
+    successors:
+      -
+        id: Activity_1ekr0h8
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_1ekr0h8:
+    plugin: eca_set_field_value
+    label: 'field_media_use aktualisieren'
+    configuration:
+      field_name: field_media_use
+      field_value: '894'
+      method: 'set:empty'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: ''
+    successors: {  }

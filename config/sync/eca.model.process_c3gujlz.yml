@@ -1,21 +1,20 @@
-uuid: eab54c0d-fb97-436e-8b2c-1e459f075540
+uuid: 38eb71e3-a65d-4798-a44b-de31a596a276
 langcode: de
 status: true
 dependencies:
   config:
-    - eca.eca.process_lrdbptr
-id: process_lrdbptr
-label: Transcription
+    - eca.eca.process_c3gujlz
+id: process_c3gujlz
+label: 'Trigger TEI Transcription'
 tags:
-  - ''
+  - untagged
 documentation: ''
 filename: ''
 modeldata: |
   <?xml version="1.0" encoding="UTF-8"?>
   <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
-    <bpmn2:process id="Process_lRdBPtr" name="Transcription" isExecutable="true">
-      <bpmn2:extensionElements />
-      <bpmn2:startEvent id="Event_0jpsfmc" name="Create Node" camunda:modelerTemplate="org.drupal.event.content_entity:insert">
+    <bpmn2:process id="Process_c3GUjLZ" name="Trigger TEI Transcription" isExecutable="true">
+      <bpmn2:startEvent id="Event_04fvb8i" name="Neue Entität erstellt" camunda:modelerTemplate="org.drupal.event.content_entity:insert">
         <bpmn2:extensionElements>
           <camunda:properties>
             <camunda:property name="pluginid" value="content_entity:insert" />
@@ -24,9 +23,9 @@ modeldata: |
             <camunda:string>node aus_fortbildungsordnung</camunda:string>
           </camunda:field>
         </bpmn2:extensionElements>
-        <bpmn2:outgoing>Flow_1i5crtz</bpmn2:outgoing>
+        <bpmn2:outgoing>Flow_1iytn4i</bpmn2:outgoing>
       </bpmn2:startEvent>
-      <bpmn2:task id="Activity_14pkh7w" name="Transcribe Document" camunda:modelerTemplate="org.drupal.action.eca_preconfigured_action:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+      <bpmn2:task id="Activity_1vv877a" name="TEI XML Transkript erstellen" camunda:modelerTemplate="org.drupal.action.eca_preconfigured_action:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
         <bpmn2:extensionElements>
           <camunda:field name="object">
             <camunda:string></camunda:string>
@@ -35,25 +34,25 @@ modeldata: |
             <camunda:property name="pluginid" value="eca_preconfigured_action:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
           </camunda:properties>
         </bpmn2:extensionElements>
-        <bpmn2:incoming>Flow_1i5crtz</bpmn2:incoming>
+        <bpmn2:incoming>Flow_1iytn4i</bpmn2:incoming>
       </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_1i5crtz" sourceRef="Event_0jpsfmc" targetRef="Activity_14pkh7w" />
+      <bpmn2:sequenceFlow id="Flow_1iytn4i" sourceRef="Event_04fvb8i" targetRef="Activity_1vv877a" />
     </bpmn2:process>
-    <bpmndi:BPMNDiagram id="sid-f130faa9-8ab3-4050-a9dd-0e05134b0603">
-      <bpmndi:BPMNPlane id="sid-4127e90b-6aac-415c-894a-63fc10a4b4c9" bpmnElement="Process_lRdBPtr">
-        <bpmndi:BPMNShape id="Event_0jpsfmc_di" bpmnElement="Event_0jpsfmc">
-          <dc:Bounds x="362" y="192" width="36" height="36" />
+    <bpmndi:BPMNDiagram id="sid-8dc15761-8085-48a8-878d-1a0ca4a25f45">
+      <bpmndi:BPMNPlane id="sid-9cb23263-6c3f-447a-9ad1-96239ddf1fd5" bpmnElement="Process_c3GUjLZ">
+        <bpmndi:BPMNShape id="Event_04fvb8i_di" bpmnElement="Event_04fvb8i">
+          <dc:Bounds x="372" y="202" width="36" height="36" />
           <bpmndi:BPMNLabel>
-            <dc:Bounds x="349" y="235" width="63" height="14" />
+            <dc:Bounds x="358" y="245" width="64" height="27" />
           </bpmndi:BPMNLabel>
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_14pkh7w_di" bpmnElement="Activity_14pkh7w">
-          <dc:Bounds x="510" y="170" width="100" height="80" />
+        <bpmndi:BPMNShape id="Activity_1vv877a_di" bpmnElement="Activity_1vv877a">
+          <dc:Bounds x="460" y="180" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNEdge id="Flow_1i5crtz_di" bpmnElement="Flow_1i5crtz">
-          <di:waypoint x="398" y="210" />
-          <di:waypoint x="510" y="210" />
+        <bpmndi:BPMNEdge id="Flow_1iytn4i_di" bpmnElement="Flow_1iytn4i">
+          <di:waypoint x="408" y="220" />
+          <di:waypoint x="460" y="220" />
         </bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>
