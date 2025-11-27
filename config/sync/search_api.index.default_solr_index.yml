@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - field.storage.node.field_abstract
     - field.storage.node.field_alt_title
+    - field.storage.node.field_beruf
     - field.storage.node.field_description
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
@@ -14,6 +15,7 @@ dependencies:
     - field.storage.node.field_full_title
     - field.storage.node.field_geographic_subject
     - field.storage.node.field_isbn
+    - field.storage.node.field_kategorie
     - field.storage.node.field_lcc_classification
     - field.storage.node.field_linked_agent
     - field.storage.node.field_member_of
@@ -135,6 +137,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_alt_title
+  field_beruf:
+    label: Beruf
+    datasource_id: 'entity:node'
+    property_path: field_beruf
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_beruf
   field_descendant_of:
     label: 'Descendant of'
     datasource_id: 'entity:node'
@@ -204,6 +214,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_isbn
+  field_kategorie:
+    label: Kategorie
+    datasource_id: 'entity:node'
+    property_path: field_kategorie
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_kategorie
   field_lcc_classification:
     label: 'Library of Congress Classification'
     datasource_id: 'entity:node'

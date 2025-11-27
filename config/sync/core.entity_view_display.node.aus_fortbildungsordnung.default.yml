@@ -19,6 +19,8 @@ dependencies:
     - field.field.node.aus_fortbildungsordnung.field_inkrafttreten
     - field.field.node.aus_fortbildungsordnung.field_kategorie
     - field.field.node.aus_fortbildungsordnung.field_lfd_nr
+    - field.field.node.aus_fortbildungsordnung.field_member_of
+    - field.field.node.aus_fortbildungsordnung.field_model
     - field.field.node.aus_fortbildungsordnung.field_papierbeschreibung
     - field.field.node.aus_fortbildungsordnung.field_papierformat
     - field.field.node.aus_fortbildungsordnung.field_scan
@@ -161,6 +163,14 @@ content:
     third_party_settings: {  }
     weight: 118
     region: content
+  field_member_of:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_papierbeschreibung:
     type: list_default
     label: above
@@ -229,6 +239,11 @@ content:
     third_party_settings: {  }
     weight: 109
     region: content
+  islandora_fits_checksum:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -236,5 +251,6 @@ content:
     region: content
 hidden:
   did_image: true
+  field_model: true
   langcode: true
   search_api_excerpt: true
