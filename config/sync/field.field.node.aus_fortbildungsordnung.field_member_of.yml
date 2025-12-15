@@ -20,6 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      aus_fortbildungsordnung: aus_fortbildungsordnung
       islandora_object: islandora_object
     sort:
       field: _none
