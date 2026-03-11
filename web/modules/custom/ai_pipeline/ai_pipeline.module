@@ -1,0 +1,39 @@
+<?php
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ai_pipeline_form_node_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Set default values:
+  \Drupal::logger('ai_pipeline')->notice(json_encode($form['field_scan']));
+  foreach ($form['field_scan']['widget']['selection'] as $delta => &$item) {
+    \Drupal::logger('ai_pipeline')->notice("ITEM @item", ['@item' => $item]);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function mymodule_node_insert(Node $node) {
+  if ($node->bundle() == 'press_release') {
+    $copy = Node::create([
+      'title' => $node->getTitle() . ' copy!',
+      'type' => 'article',
+      'status' => 0,
+    ]);
+    foreach ($node as $key => $value) {
+      // Copy values from all fields (fields start with "field_").
+      if (strpos($key, 'field_') === 0) {
+        if (isset($copy->{$key})) {
+          $copy->{$key}->setValue($node->{$key}->getValue());
+        }
+      }
+    }
+    $copy->save();
+  }
+}
+
+function aipipelineCallback(&$form, \Drupal\Core\Form\FormStateInterface $form_state){
+    \Drupal::logger('ai_pipeline')->notice('AJAX Form fired');
+    $form['field_digitalisierer']['widget'][0]['value']['#value'] = "AJAX SCAN WURDE VERÄNDERT";
+    return $form['field_digitalisierer']; //['widget'][0]['value']; //['value']['#value'];
+}
