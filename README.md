@@ -101,7 +101,7 @@ If not the default `tcp://127.0.0.1:61613`, this will have to be set (see Usage 
       ],
     ];
     
-    $settings['flysystem']['webdav']['driver'] = 'webdav'
+    $settings['flysystem']['webdav']['driver'] = 'webdav';
     $settings['flysystem']['webdav']['config']['base_uri'] = 'https://islandora.dev/exist/webdav/db/berufearchiv/';  // set URL accordingly
     $settings['flysystem']['webdav']['config']['username'] = 'admin';
     $settings['flysystem']['webdav']['config']['password'] = ''; // set password accordingly
