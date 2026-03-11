@@ -65,10 +65,13 @@
         "drupal/views_data_export": "^1.2",
         "drupal/views_field_view": "^1.0@beta",
         "drush/drush": "^13",
+        "ijin82/flysystem-webdav": "^1.0",
         "islandora-rdm/islandora_fits": "dev-8.x-1.x as 1.x-dev",
         "islandora/views_nested_details": "^1.0",
+        "league/flysystem-webdav": "^1.0",
         "library/pdf.js": "^5",
-        "mjordan/islandora_workbench_integration": "dev-main"
+        "mjordan/islandora_workbench_integration": "dev-main",
+        "sabre/dav": "^4.7"
     },
     "conflict": {
         "drupal/drupal": "*",
