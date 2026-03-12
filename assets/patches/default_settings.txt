@@ -73,14 +73,6 @@ $databases['default']['default'] = [
 $settings['flysystem']['fedora']['driver'] = 'fedora';
 $settings['flysystem']['fedora']['config']['root'] = file_get_contents($path . 'DRUPAL_DEFAULT_FCREPO_URL');
 
-$settings['flysystem']['webdav']['driver'] = 'webdav';
-$settings['flysystem']['webdav']['config']['base_uri'] = 'https://islandora.dev/exist/webdav/db/berufearchiv/';
-$settings['flysystem']['webdav']['config']['username'] = 'admin';
-$settings['flysystem']['webdav']['config']['password'] = '';
-$settings['flysystem']['webdav']['config']['authType'] = 1;
-$settings['flysystem']['webdav']['disable_chmod'] = TRUE;
-
-
 // Change the php_storage settings in your setting.php. It is recommend that
 // this directory be outside out of the docroot.
 $settings['php_storage']['twig']['directory'] = $settings['file_private_path'] . '/php';
