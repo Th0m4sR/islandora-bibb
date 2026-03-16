@@ -53,7 +53,7 @@ tips:
   views-ui-filter:
     id: views-ui-filter
     plugin: text
-    label: 'Filter your view'
+    label: 'Ansicht filtern'
     weight: 6
     selector: .views-ui-display-tab-bucket.filter
     body: 'Fügen Sie Filter hinzu, um die Ergebnisse in der Ausgabe einzuschränken. Um z. B. nur Inhalte anzuzeigen, die <em>veröffentlicht</em> sind, würden Sie einen Filter für <em>Veröffentlicht</em> hinzufügen und <em>Ja</em> auswählen.'

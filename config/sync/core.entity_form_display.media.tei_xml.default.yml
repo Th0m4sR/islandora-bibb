@@ -3,7 +3,11 @@ langcode: de
 status: true
 dependencies:
   config:
+    - field.field.media.tei_xml.field_file_size
     - field.field.media.tei_xml.field_media_file_1
+    - field.field.media.tei_xml.field_media_of
+    - field.field.media.tei_xml.field_media_use
+    - field.field.media.tei_xml.field_mime_type
     - media.type.tei_xml
   module:
     - file
@@ -19,12 +23,43 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_file_size:
+    type: number
+    weight: 102
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_media_file_1:
     type: file_generic
     weight: 0
     region: content
     settings:
       progress_indicator: throbber
+    third_party_settings: {  }
+  field_media_of:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_use:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mime_type:
+    type: string_textfield
+    weight: 101
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select

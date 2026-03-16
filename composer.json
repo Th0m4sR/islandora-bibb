@@ -71,7 +71,7 @@
         "league/flysystem-webdav": "^1.0",
         "library/pdf.js": "^5",
         "mjordan/islandora_workbench_integration": "dev-main",
-        "sabre/dav": "^4.7"
+        "sabre/dav": "^4.6"
     },
     "conflict": {
         "drupal/drupal": "*",

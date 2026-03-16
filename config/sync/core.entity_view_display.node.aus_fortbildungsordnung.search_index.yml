@@ -23,7 +23,6 @@ dependencies:
     - field.field.node.aus_fortbildungsordnung.field_model
     - field.field.node.aus_fortbildungsordnung.field_papierbeschreibung
     - field.field.node.aus_fortbildungsordnung.field_papierformat
-    - field.field.node.aus_fortbildungsordnung.field_scan
     - field.field.node.aus_fortbildungsordnung.field_schlagwoerter
     - field.field.node.aus_fortbildungsordnung.field_seitenzahl
     - field.field.node.aus_fortbildungsordnung.field_titelzusatz
@@ -75,7 +74,6 @@ hidden:
   field_model: true
   field_papierbeschreibung: true
   field_papierformat: true
-  field_scan: true
   field_schlagwoerter: true
   field_seitenzahl: true
   field_titelzusatz: true

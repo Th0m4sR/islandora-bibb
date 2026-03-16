@@ -11,7 +11,7 @@ dependencies:
 _core:
   default_config_hash: Zwu8JUsBiYaxPko_9DbJJhA-ZZSGOm81I9XtT9NH3M4
 id: manage_members
-label: 'Manage members'
+label: 'Mitglieder verwalten'
 module: views
 description: 'Manage members belonging to a piece of content'
 tag: ''
@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Manage members'
+      title: 'Mitglieder verwalten'
       fields:
         node_bulk_form:
           id: node_bulk_form

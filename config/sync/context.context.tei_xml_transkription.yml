@@ -1,0 +1,38 @@
+uuid: f9ee02bc-d5f0-460d-9518-709359be5932
+langcode: de
+status: true
+dependencies:
+  module:
+    - islandora
+label: 'TEI XML Transkription'
+name: tei_xml_transkription
+group: Derivatives
+description: 'Erstellt ein TEI XML Transkript, wenn ein neues Original File als Bild oder PDF hochgeladen wird'
+requireAllConditions: true
+disabled: false
+conditions:
+  media_has_term:
+    id: media_has_term
+    negate: false
+    uuid: a8bc64a9-7977-4260-87d3-315d656f2bda
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+    uri: 'http://pcdm.org/use#OriginalFile'
+    logic: and
+    naive_references: 0
+  parent_node_has_term:
+    id: parent_node_has_term
+    negate: false
+    uuid: 4b4e7219-a8d1-4307-b7c4-b7c8c7292e3b
+    context_mapping:
+      media: '@islandora.media_route_context_provider:media'
+    uri: 'https://schema.org/DigitalDocument'
+    logic: and
+    naive_references: 0
+reactions:
+  derivative:
+    id: derivative
+    saved: false
+    actions:
+      generate_a_tei_xml_derivative: generate_a_tei_xml_derivative
+weight: 0

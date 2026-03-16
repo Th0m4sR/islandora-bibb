@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Log
+      title: Protokoll
       fields:
         name:
           id: name
@@ -403,7 +403,7 @@ display:
           exposed: true
           expose:
             operator_id: variables_op
-            label: 'Message contains'
+            label: 'Die Nachricht enthält'
             description: ''
             use_operator: false
             operator: variables_op
@@ -575,7 +575,7 @@ display:
       path: admin/config/workflow/eca/log
       menu:
         type: tab
-        title: Log
+        title: Protokoll
         description: ''
         weight: 99
         expanded: false
@@ -593,7 +593,7 @@ display:
       tags: {  }
   page_2:
     id: page_2
-    display_title: 'Page 2'
+    display_title: 'Seite 2'
     display_plugin: page
     position: 2
     display_options:
@@ -601,7 +601,7 @@ display:
       path: admin/config/workflow/eca/log
       menu:
         type: normal
-        title: Log
+        title: Protokoll
         description: ''
         weight: 99
         expanded: false

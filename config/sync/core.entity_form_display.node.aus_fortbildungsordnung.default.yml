@@ -22,7 +22,6 @@ dependencies:
     - field.field.node.aus_fortbildungsordnung.field_model
     - field.field.node.aus_fortbildungsordnung.field_papierbeschreibung
     - field.field.node.aus_fortbildungsordnung.field_papierformat
-    - field.field.node.aus_fortbildungsordnung.field_scan
     - field.field.node.aus_fortbildungsordnung.field_schlagwoerter
     - field.field.node.aus_fortbildungsordnung.field_seitenzahl
     - field.field.node.aus_fortbildungsordnung.field_titelzusatz
@@ -33,7 +32,6 @@ dependencies:
     - comment
     - datetime
     - link
-    - media_library
     - path
     - text
 id: node.aus_fortbildungsordnung.default
@@ -184,13 +182,6 @@ content:
     weight: 133
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_scan:
-    type: media_library_widget
-    weight: 144
-    region: content
-    settings:
-      media_types: {  }
     third_party_settings: {  }
   field_schlagwoerter:
     type: string_textfield

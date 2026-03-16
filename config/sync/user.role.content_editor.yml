@@ -10,6 +10,7 @@ dependencies:
     - media.type.fits_technical_metadata
     - media.type.image
     - media.type.remote_video
+    - media.type.tei_xml
     - media.type.video
     - node.type.article
     - node.type.aus_fortbildungsordnung
@@ -58,6 +59,7 @@ permissions:
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
+  - 'create tei_xml media'
   - 'create terms in tags'
   - 'create url aliases'
   - 'create video media'
@@ -73,6 +75,7 @@ permissions:
   - 'delete own image media'
   - 'delete own page content'
   - 'delete own remote_video media'
+  - 'delete own tei_xml media'
   - 'delete own video media'
   - 'delete page revisions'
   - 'edit any audio media'
@@ -83,6 +86,7 @@ permissions:
   - 'edit any fits_technical_metadata media'
   - 'edit any image media'
   - 'edit any remote_video media'
+  - 'edit any tei_xml media'
   - 'edit any video media'
   - 'edit own article content'
   - 'edit own audio media'
@@ -95,6 +99,7 @@ permissions:
   - 'edit own image media'
   - 'edit own page content'
   - 'edit own remote_video media'
+  - 'edit own tei_xml media'
   - 'edit own video media'
   - 'edit terms in tags'
   - 'manage media'
@@ -106,6 +111,7 @@ permissions:
   - 'revert any fits_technical_metadata media revisions'
   - 'revert any image media revisions'
   - 'revert any remote_video media revisions'
+  - 'revert any tei_xml media revisions'
   - 'revert any video media revisions'
   - 'update media'
   - 'view all revisions'
@@ -116,6 +122,7 @@ permissions:
   - 'view any fits_technical_metadata media revisions'
   - 'view any image media revisions'
   - 'view any remote_video media revisions'
+  - 'view any tei_xml media revisions'
   - 'view any video media revisions'
   - 'view media'
   - 'view own unpublished content'
