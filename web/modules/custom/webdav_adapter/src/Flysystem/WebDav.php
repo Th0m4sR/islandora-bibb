@@ -4,7 +4,9 @@ namespace Drupal\webdav_adapter\Flysystem;
 use League\Flysystem\Filesystem;
 use League\Flysystem\WebDAV\WebDAVAdapter;
 //use OrangeJuice\Flysystem\WebDAV\WebDAVAdapter;
-use Sabre\DAV\Client as WebDavClient;
+use Sabre\DAV\Client as WebDavClient; // TODO COmment back in if line below is shit
+use Drupal\webdav_adapter\Flysystem\StableWebDAVAdapter; // TODO Remove if is hit
+
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Logger\LoggerChannelInterface;
 use Drupal\Core\Logger\RfcLogLevel;
@@ -86,7 +88,8 @@ class WebDav implements FlysystemPluginInterface, ContainerFactoryPluginInterfac
    * {@inheritdoc}
    */
   public function getAdapter() {
-    return new WebDAVAdapter($this->client, '', FALSE); //, $this->configuration['root'] ?? '/');
+    $root = $this->configuration['root'] ?? '';
+    return new StableWebDAVAdapter($this->client, $root); // , FALSE); //, $this->configuration['root'] ?? '/');
   }
 
   /**

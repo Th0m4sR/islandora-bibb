@@ -16,16 +16,6 @@ class WebdavFileSystem extends \Drupal\Core\File\FileSystem {
     parent::__construct($streamWrapperManager, $settings);
   }
 
-  public function chmod($uri, $mode = NULL) {
-    $scheme = $this->streamWrapperManager->getScheme($uri);
-
-    if ($scheme === 'webdav') {
-      return TRUE;
-    }
-
-    return $this->inner->chmod($uri, $mode);
-  }
-
   public function __call($method, $args) {
     return $this->inner->{$method}(...$args);
   }
