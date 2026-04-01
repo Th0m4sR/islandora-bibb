@@ -46,7 +46,6 @@ permissions:
   - 'access toolbar'
   - 'access tour'
   - 'administer media'
-  - 'administer media types'
   - 'administer url aliases'
   - 'create article content'
   - 'create audio media'
