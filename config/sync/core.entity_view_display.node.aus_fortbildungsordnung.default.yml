@@ -100,7 +100,7 @@ content:
     label: above
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: olivero_medium
     third_party_settings: {  }
     weight: 106
     region: content
