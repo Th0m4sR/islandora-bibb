@@ -85,6 +85,9 @@ $settings['flysystem']['webdav']['disable_chmod'] = TRUE;
 $settings['php_storage']['twig']['directory'] = $settings['file_private_path'] . '/php';
 $settings['php_storage']['twig']['secret'] = $settings['hash_salt'];
 
+$settings['node_title_length_chars'] = 1024;
+$settings['taxonomy_term_title_length_chars'] = 1024;
+
 /**
  *  End Section.
  */
