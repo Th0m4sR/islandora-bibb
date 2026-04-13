@@ -76,7 +76,7 @@ $settings['flysystem']['fedora']['config']['root'] = file_get_contents($path . '
 $settings['flysystem']['webdav']['driver'] = 'webdav';
 $settings['flysystem']['webdav']['config']['base_uri'] = file_get_contents($path . 'DRUPAL_DEFAULT_EXISTDB_URL');
 $settings['flysystem']['webdav']['config']['username'] = 'islandora';
-$settings['flysystem']['webdav']['config']['password'] = file_get_contents($path . 'DRUPAL_DEFAULT_EXISTDB_PASSWORD');
+$settings['flysystem']['webdav']['config']['password'] = file_get_contents('/run/secrets/EXISTDB_PASSWORD');
 $settings['flysystem']['webdav']['config']['authType'] = 1;
 $settings['flysystem']['webdav']['disable_chmod'] = TRUE;
 
