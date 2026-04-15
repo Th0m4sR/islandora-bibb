@@ -9,6 +9,7 @@ dependencies:
     - comment
     - contact
     - filter
+    - islandora
     - media
     - rest
     - shortcut
@@ -24,6 +25,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'manage media'
   - 'post comments'
   - 'restful get oai_pmh'
   - 'skip comment approval'

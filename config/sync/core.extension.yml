@@ -83,6 +83,7 @@ module:
   jwt_auth_issuer: 0
   key: 0
   language: 0
+  ldap_auth: 0
   link: 0
   locale: 0
   media: 0
