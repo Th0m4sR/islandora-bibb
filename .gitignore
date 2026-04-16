@@ -1,12 +1,10 @@
 vendor
-web
+web/*
 .idea
 config/sync/.htaccess
 private
-
-# But don't ignore the specific path
 !web/modules/
 !web/modules/custom/
-
-# And make sure files inside it are tracked
 !web/modules/custom/**
+web/modules/contrib
+web/modules/README.txt
