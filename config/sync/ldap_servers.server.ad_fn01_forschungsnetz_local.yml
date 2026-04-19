@@ -1,0 +1,38 @@
+uuid: 3bfd7b83-9040-479c-b42d-f492d6a961cd
+langcode: de
+status: true
+dependencies: {  }
+id: ad_fn01_forschungsnetz_local
+label: AD@forschungsnetz.local
+type: default
+address: 10.15.0.15
+port: 3268
+timeout: 10
+encryption: none
+weight: null
+bind_method: service_account
+binddn: GSU-Service@forschungsnetz.local
+bindpw: '!wL3xGg=UU'
+basedn:
+  - 'ou=Benutzer, dc=forschungsnetz, dc=local'
+user_attr: samaccountname
+account_name_attr: samaccountname
+mail_attr: mail
+mail_template: '[samaccountname]@bibb.de'
+picture_attr: ''
+unique_persistent_attr: dn
+unique_persistent_attr_binary: false
+user_dn_expression: ''
+testing_drupal_username: khein
+testing_drupal_user_dn: 'ou=Benutzer, dc=forschungsnetz, dc=local'
+grp_unused: true
+grp_object_cat: ''
+grp_nested: false
+grp_user_memb_attr_exists: false
+grp_user_memb_attr: ''
+grp_memb_attr: ''
+grp_memb_attr_match_user_attr: ''
+grp_derive_from_dn: false
+grp_derive_from_dn_attr: ''
+grp_test_grp_dn: ''
+grp_test_grp_dn_writeable: ''

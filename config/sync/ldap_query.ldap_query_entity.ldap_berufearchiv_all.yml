@@ -1,0 +1,14 @@
+uuid: ca809e5e-59f9-43af-8682-5f2903b90b66
+langcode: de
+status: true
+dependencies: {  }
+id: ldap_berufearchiv_all
+label: LDAP-Berufearchiv-ALL
+server_id: ad_fn01_forschungsnetz_local
+base_dn: 'ou=Benutzer, dc=forschungsnetz, dc=local'
+filter: '(&(objectCategory=person)(objectClass=user)(sAMAccountName={login})(memberOf:1.2.840.113556.1.4.1941:=CN=Berufearchiv,OU=groups,DC=forschungsnetz,DC=local))'
+attributes: ''
+size_limit: 0
+time_limit: 0
+dereference: 0
+scope: sub
