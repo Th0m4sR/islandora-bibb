@@ -6,7 +6,6 @@ dependencies:
     - filter.format.basic_html
     - rest.resource.oai_pmh
   module:
-    - comment
     - contact
     - filter
     - islandora
@@ -21,13 +20,10 @@ label: 'Angemeldeter Benutzer'
 weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'manage media'
-  - 'post comments'
   - 'restful get oai_pmh'
-  - 'skip comment approval'
   - 'use text format basic_html'
   - 'view media'
