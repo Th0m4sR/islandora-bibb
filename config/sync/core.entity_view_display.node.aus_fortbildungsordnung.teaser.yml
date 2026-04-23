@@ -43,7 +43,24 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 101
+    weight: 5
+    region: content
+  field_beruf:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_erscheinungsjahr:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
     region: content
   field_member_of:
     type: entity_reference_label
@@ -51,42 +68,33 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
-    region: content
-  field_model:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
     weight: 0
     region: content
   islandora_fits_checksum:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden:
   did_image: true
   field_anmerkung: true
-  field_beruf: true
   field_bestandserweiterung: true
   field_charge: true
   field_digitalisierer: true
   field_dublette: true
   field_erlassdatum: true
-  field_erscheinungsjahr: true
   field_erscheinungsort: true
   field_fundort: true
   field_herausgeber: true
   field_inkrafttreten: true
   field_kategorie: true
   field_lfd_nr: true
+  field_model: true
   field_papierbeschreibung: true
   field_papierformat: true
   field_schlagwoerter: true

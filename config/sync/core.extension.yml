@@ -84,7 +84,6 @@ module:
   jwt_auth_issuer: 0
   key: 0
   language: 0
-  ldap_auth: 0
   ldap_authentication: 0
   ldap_authorization: 0
   ldap_query: 0
